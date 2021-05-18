@@ -1,8 +1,8 @@
 # A blog demonstrating how you can add custom LinkedIn-like reactions to your blog posts with serverless Redis.
 
-This repo is a source code for my [article]() with a detailed explanation of how I used Redis to create the reactions feature.
+![image info](./reactions-wallpaper.jpg)
 
-Cloned from [Gatsby's blog starter](https://github.com/gatsbyjs/gatsby-starter-blog)
+This repo is a source code for my [article]() with a detailed explanation of how I used serverless Redis to create the reactions feature.
 
 You can see reactions in action on my website. Pick any post and you will find reactions at the bottom of the post. For instance, this [post](https://techforitrecruiters.com/blog/2021-05-11-what-is-a-full-stack-developer/)
 
@@ -28,3 +28,5 @@ You can see reactions in action on my website. Pick any post and you will find r
     - SENTRY_DSN={optional}
 #### Redis
 - I use Serverless Redis from [Upstash](https://upstash.com?utm_source=sndr_1)
+
+Cloned from [Gatsby's blog starter](https://github.com/gatsbyjs/gatsby-starter-blog)
