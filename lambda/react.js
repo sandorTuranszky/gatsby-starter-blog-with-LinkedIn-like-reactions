@@ -19,10 +19,6 @@ module.exports.handler = catchEvents(async (event, _context, callback) => {
 
   try {
     const { id, reaction } = await schema.validateAsync(data);
-    // This is for the article
-    // const response = await hincrbyAsync(getKeySchema({ id }), composeData({ reaction }), 1);
-    // return callback(null, successResponse(200, { [reactions[reaction]]: response }));
-
     const [hincrby, zincrby] = await Promise.all([
       hincrbyAsync(getKeySchema({ id }), composeData({ reaction }), 1),
       // A sorted set to track reactions to posts only to be able to get posts with the most Likes, Insightful and Curious reactions.
