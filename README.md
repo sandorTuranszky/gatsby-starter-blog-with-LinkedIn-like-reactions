@@ -4,6 +4,8 @@
 
 This repo is a source code for my [article]() with a detailed explanation of how I used serverless Redis to create the reactions feature.
 
+![image info](./reactions-demo.png)
+
 You can see reactions in action on my website. Pick any post and you will find reactions at the bottom of the post. For instance, this [post](https://techforitrecruiters.com/blog/2021-05-11-what-is-a-full-stack-developer/)
 
 #### I use Netlify both for deployment and development
