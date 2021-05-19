@@ -2,7 +2,7 @@
 
 ![image info](./reactions-wallpaper.jpg)
 
-This repo is a source code for my [article]() with a detailed explanation of how I used serverless Redis to create the reactions feature.
+This repo is a source code for my [article](https://dev.to/sandorturanszky/how-to-create-linkedin-like-reactions-with-serverless-redis-4cad) with a detailed explanation of how I used serverless Redis to create the reactions feature.
 
 ![image info](./reactions-demo.png)
 

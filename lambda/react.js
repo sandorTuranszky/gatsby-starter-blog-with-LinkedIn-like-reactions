@@ -1,8 +1,8 @@
 /**
- * POST endpoint to store a reaction
+ * POST/PATCH endpoint to store a reaction
  */
 const Joi = require('joi');
-const { hincrbyAsync, zincrbyAsync, zrevrangebyscoreAsync } = require('./helpers/redis');
+const { hincrbyAsync, zincrbyAsync } = require('./helpers/redis');
 const { successResponse, errorResponse } = require('./helpers');
 const { catchEvents, reportEvent } = require('./helpers/sentry');
 const { reactions, getKeySchema, composeData } = require('./helpers/reactions');
@@ -19,7 +19,7 @@ module.exports.handler = catchEvents(async (event, _context, callback) => {
 
   try {
     const { id, reaction } = await schema.validateAsync(data);
-    const [hincrby, zincrby] = await Promise.all([
+    const [hincrby] = await Promise.all([
       hincrbyAsync(getKeySchema({ id }), composeData({ reaction }), 1),
       // A sorted set to track reactions to posts only to be able to get posts with the most Likes, Insightful and Curious reactions.
       zincrbyAsync(`reaction:${reaction}`, 1, `post:${id}`),
